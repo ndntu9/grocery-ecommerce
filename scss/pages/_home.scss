@@ -21,6 +21,8 @@
 
     &-wrapper {
         width: 100%;
+        background: var(--banner-bg-color);
+        border-radius: 20px;
         position: absolute;
         top: 0;
         right: 0;
@@ -29,10 +31,37 @@
     }
 
     &__img {
-        width: 100%;
-        height: 100%;
+        width: 522px;
+        height: 413px;
         object-fit: cover;
-        border-radius: 20px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        @include abstracts.breakpoint(xl) {
+            width: 439px;
+            height: 348px;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            width: 368px;
+            height: 289px;
+        }
+
+        @include abstracts.breakpoint(md) {
+            width: 313px;
+            height: 247px;
+        }
+
+        @include abstracts.breakpoint(sm) {
+            width: 275px;
+            height: 220px;
+        }
+
+        @include abstracts.breakpoint(xs) {
+            width: 190px;
+            height: 149px;
+        }
     }
 
     &__text {
@@ -63,5 +92,13 @@
             top: 20px;
             left: 20px;
         }
+    }
+}
+
+.category {
+    &__heading {
+        @include base.bd-24;
+
+        color: var(--category-heading-text-color);
     }
 }

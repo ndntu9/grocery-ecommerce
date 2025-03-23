@@ -178,9 +178,11 @@ html {
   --header-signin-text-color: #1a162e;
   --header-mobile-bg-color: #ffffff;
   --header-mobile-shadow-color: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
-  --banner-text-color: #ffffff;
   --nav-dropdown-text-color: #1a162e;
   --nav-dropdown-icon-color: brightness(0) saturate(100%) invert(8%) sepia(47%) saturate(1140%) hue-rotate(215deg) brightness(86%) contrast(95%);
+  --banner-bg-color: #77dae6;
+  --banner-text-color: #ffffff;
+  --category-heading-text-color: #1a162e;
   --btn-primary-bg-color: #ffb700;
   --btn-primary-text-color: #1a162e;
   --btn-toggle-bg-color: #f8f8fb;
@@ -197,6 +199,9 @@ html.dark {
   --header-mobile-shadow-color: 0px 20px 60px 10px rgba(0, 0, 0, 0.2);
   --nav-dropdown-text-color: #ffffff;
   --nav-dropdown-icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(284deg) brightness(106%) contrast(102%);
+  --banner-bg-color: #77dae6;
+  --banner-text-color: #ffffff;
+  --category-heading-text-color: #ffffff;
   --btn-primary-bg-color: #ffb700;
   --btn-primary-text-color: #1a162e;
   --btn-toggle-bg-color: #374750;
@@ -684,6 +689,8 @@ html.dark {
 }
 .banner-wrapper {
   width: 100%;
+  background: var(--banner-bg-color);
+  border-radius: 20px;
   position: absolute;
   top: 0;
   right: 0;
@@ -691,10 +698,42 @@ html.dark {
   left: 0;
 }
 .banner__img {
-  width: 100%;
-  height: 100%;
+  width: 522px;
+  height: 413px;
   object-fit: cover;
-  border-radius: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+@media (max-width: 1399.98px) {
+  .banner__img {
+    width: 439px;
+    height: 348px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .banner__img {
+    width: 368px;
+    height: 289px;
+  }
+}
+@media (max-width: 991.98px) {
+  .banner__img {
+    width: 313px;
+    height: 247px;
+  }
+}
+@media (max-width: 767.98px) {
+  .banner__img {
+    width: 275px;
+    height: 220px;
+  }
+}
+@media (max-width: 575.98px) {
+  .banner__img {
+    width: 190px;
+    height: 149px;
+  }
 }
 .banner__text {
   font-size: 4.2rem;
@@ -729,6 +768,13 @@ html.dark {
     top: 20px;
     left: 20px;
   }
+}
+
+.category__heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 141.667%;
+  color: var(--category-heading-text-color);
 }
 
 .auth .auth__form-inner .auth__social-google-btn, .auth .auth__form, .auth .auth__banner {
