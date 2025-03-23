@@ -1,0 +1,39 @@
+@use '../base';
+
+.btn {
+    display: inline-block;
+
+    &-primary {
+        @include base.md-18;
+
+        background: var(--btn-primary-bg-color);
+        border-radius: 10px;
+        color: var(--btn-primary-text-color);
+    }
+
+    &-toggle {
+        width: 62px;
+        height: 30px;
+        border-radius: 15px;
+        background: var(--btn-toggle-bg-color);
+        position: relative;
+
+        &__slider {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--btn-toggle-slider-color);
+            box-shadow: var(--btn-toggle-slider-shadow-color);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.3s;
+        }
+
+        &.dark &__slider {
+            left: calc(100% - 30px);
+        }
+    }
+}

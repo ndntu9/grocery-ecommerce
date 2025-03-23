@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign In | Grocery Ecommerce</title>
+        <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+        <script src="https://kit.fontawesome.com/4192ecb93b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <main class="auth">
+            <div class="container d-flex">
+                <div class="auth__banner d-flex d-md-none">
+                    <div class="auth__banner-inner">
+                        <div class="banner__thumb-wrapper">
+                            <img src="./assets/img/auth-banner.png" alt="" class="banner__thumb" />
+                        </div>
+                        <div class="banner__text-wrapper">
+                            <p class="banner__text">The best of luxury brand values, high quality products, and innovative services</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="auth__form d-flex">
+                    <div class="auth__form-inner">
+                        <div class="logo">
+                            <img src="./assets/icons/logo.svg" alt="" class="logo__img" />
+                            <p class="logo__text">grocerymart</p>
+                        </div>
+                        <div class="auth__form-heading">
+                            <h1 class="auth__header">Sign In</h1>
+                            <p class="auth__text">Let’s sign in your account and Shop like a pro and save money.</p>
+                        </div>
+                        <div class="auth__form-body">
+                            <form action="" class="form form--auth" novalidate>
+                                <div class="form__group">
+                                    <input type="email" class="form__input" placeholder="Email" />
+                                    <img src="./assets/icons/email.svg" alt="" class="form__icon" />
+                                    <p class="form__message"></p>
+                                </div>
+                                <div class="form__group">
+                                    <input type="password" class="form__input" placeholder="Password" />
+                                    <img src="./assets/icons/password.svg" alt="" class="form__icon" />
+                                    <p class="form__message"></p>
+                                </div>
+                                <div class="form__group form__options d-flex">
+                                    <div class="form__option-item d-flex">
+                                        <input type="checkbox" id="checkbox" class="form__checkbox" hidden />
+                                        <label for="checkbox" class="form__custom-checkbox d-flex">
+                                            <i class="fa-solid fa-check form__checkbox-icon"></i>
+                                        </label>
+                                        <label for="checkbox" class="form__checkbox-label">Keep me logged in</label>
+                                    </div>
+                                    <div class="form__option-item">
+                                        <a href="./recovery.html" class="form__recovery">Recovery Password</a>
+                                    </div>
+                                </div>
+                                <div class="form__group">
+                                    <button class="form__submit">Sign In</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="auth__form-social">
+                            <a href="./home.html" class="auth__social-google-btn d-flex">
+                                <i class="fa-brands fa-google auth__social-google-icon"></i>
+                                Sign in with Gmail
+                            </a>
+                        </div>
+                        <div class="auth__form-footer">
+                            <p class="form__footer-message">You don't have an account yet? <a href="./sign-up.html" class="form__footer-link">Sign Up</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

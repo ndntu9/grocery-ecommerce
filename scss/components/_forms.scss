@@ -1,0 +1,130 @@
+@use '../base';
+@use '../abstracts';
+
+%flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.form--auth {
+    --auth-form-input-padding: 12px;
+
+    .form__group {
+        position: relative;
+    }
+
+    .form__group:not(:first-child) {
+        margin-top: 30px;
+    }
+
+    .form__input {
+        @include base.md-18;
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid var(--auth-form-input-border-color);
+        padding: var(--auth-form-input-padding);
+        color: var(--auth-form-input-text-color);
+
+        @include abstracts.breakpoint(xs) {
+            @include base.md-16;
+        }
+
+        &::placeholder {
+            color: var(--auth-form-input-text-color);
+        }
+
+        &.warning {
+            color: var(--auth-form-message-text-color);
+            border-color: var(--auth-form-message-text-color);
+
+            & ~ .form__icon {
+                filter: var(--auth-form-icon-warning-color);
+            }
+        }
+    }
+
+    .form__icon {
+        position: absolute;
+        top: 50%;
+        right: var(--auth-form-input-padding);
+        transform: translateY(-50%);
+        filter: var(--auth-form-input-icon-color);
+    }
+
+    .form__message {
+        @include base.rg-14;
+        font-weight: 500;
+        color: var(--auth-form-message-text-color);
+        text-align: left;
+        white-space: nowrap;
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+        transition: all 0.3s;
+    }
+
+    .form__options {
+        justify-content: space-between;
+    }
+
+    .form__option-item {
+        align-items: center;
+        gap: 13px;
+    }
+
+    .form__checkbox-label {
+        @include base.md-15;
+        color: var(--auth-form-label-text-color);
+        cursor: pointer;
+
+        @include abstracts.breakpoint(xs) {
+            @include base.rg-14;
+        }
+    }
+
+    .form__custom-checkbox {
+        @extend %flex-center;
+        width: 18.5px;
+        height: 18.5px;
+        border: solid 1.5px var(--auth-form-checkbox-color);
+        border-radius: 5px;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    .form__checkbox-icon {
+        transform: scale(0.8);
+        color: var(--auth-form-checkbox-icon-color);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+    }
+
+    .form__checkbox:checked ~ .form__custom-checkbox {
+        background-color: var(--auth-form-checkbox-color);
+    }
+
+    .form__checkbox:checked ~ .form__custom-checkbox .form__checkbox-icon {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .form__recovery {
+        @include base.md-15;
+        color: var(--auth-form-recovery-text-color);
+
+        @include abstracts.breakpoint(xs) {
+            @include base.md-14;
+        }
+    }
+
+    .form__submit {
+        @include base.md-18;
+        width: 100%;
+        padding: 12px 0;
+        border-radius: 10px;
+        color: var(--auth-form-submit-btn-text-color);
+        background: var(--auth-form-submit-btn-bg-color);
+    }
+}

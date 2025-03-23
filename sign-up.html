@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign Up | Grocery Ecommerce</title>
+        <!-- ? Favicon -->
+        <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <!-- ? Font -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+        <!-- ? CSS -->
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+        <!-- ? Font awesome -->
+        <script src="https://kit.fontawesome.com/4192ecb93b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- ? SignUp Page -->
+        <main class="main">
+            <div class="container d-flex">
+                <!-- ? Banner -->
+                <div class="main__banner d-flex">
+                    <div class="banner__inner d-md-flex">
+                        <div class="logo d-none d-md-flex">
+                            <img src="./assets/icons/logo.svg" alt="" class="logo__img" />
+                            <p class="logo__text">grocerymart</p>
+                        </div>
+                        <div class="banner__content">
+                            <img src="./assets/img/auth-banner.png" alt="" class="banner__thumb" />
+                            <p class="banner__desc">The best of luxury brand values, high quality products, and innovative services</p>
+                        </div>
+                        <ul class="pagination d-none d-md-flex">
+                            <li class="pagination__item">
+                                <button class="pagination__btn"></button>
+                            </li>
+                            <li class="pagination__item">
+                                <button class="pagination__btn"></button>
+                            </li>
+                            <li class="pagination__item">
+                                <button class="pagination__arrow d-flex">
+                                    <img src="./assets/icons/right-arrow.svg" alt="" class="pagination__icon" />
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- ? SignUp Form -->
+                <div class="main__auth d-flex">
+                    <div class="auth__inner">
+                        <div class="logo">
+                            <img src="./assets/icons/logo.svg" alt="" class="logo__img" />
+                            <p class="logo__text">grocerymart</p>
+                        </div>
+                        <div class="auth__heading">
+                            <h1 class="auth__title">Sign Up</h1>
+                            <p class="auth__desc">Let’s sign up your account and Shop like a pro and save money.</p>
+                        </div>
+                        <div class="auth__form">
+                            <form action="" class="form form-auth">
+                                <div class="form__group">
+                                    <input type="email" class="form__input" placeholder="Email" />
+                                    <img src="./assets/icons/email.svg" alt="" class="form__icon" />
+                                    <p class="form__message"></p>
+                                </div>
+                                <div class="form__group">
+                                    <input type="password" class="form__input" placeholder="Password" />
+                                    <img src="./assets/icons/password.svg" alt="" class="form__icon" />
+                                    <p class="form__message"></p>
+                                </div>
+                                <div class="form__group">
+                                    <input type="password" class="form__input" placeholder="Confirm Password" />
+                                    <img src="./assets/icons/password.svg" alt="" class="form__icon" />
+                                    <p class="form__message"></p>
+                                </div>
+                                <div class="form__group form__options d-flex">
+                                    <div class="form__item d-flex">
+                                        <input type="checkbox" id="checkbox" class="form__checkbox" hidden />
+                                        <label for="checkbox" class="custom-checkbox d-flex">
+                                            <i class="fa-solid fa-check checkbox-icon"></i>
+                                        </label>
+                                        <label for="checkbox">Keep me logged in</label>
+                                    </div>
+                                    <div class="form__item">
+                                        <a href="#!" class="form__recovery">Recovery Password</a>
+                                    </div>
+                                </div>
+                                <div class="form__group">
+                                    <button class="form__submit">Sign In</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="auth__google">
+                            <button class="auth__google d-flex">
+                                <i class="fa-brands fa-google"></i>
+                                Sign in with Gmail
+                            </button>
+                        </div>
+                        <div class="auth__footer">
+                            <p class="auth__message">You have an account yet? <a href="./index.html" class="auth__link">Sign In</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- JavaScript -->
+        <script src="./assets/js/sign-up.js"></script>
+    </body>
+</html>

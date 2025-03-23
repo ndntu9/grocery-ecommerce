@@ -1,0 +1,132 @@
+@use '../base';
+@use '../abstracts';
+
+%flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.auth {
+    background: var(--auth-bg-color);
+    background: var(--auth-bg-gradient-color);
+
+    @include abstracts.breakpoint(md) {
+        background: transparent;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .auth__banner {
+        @extend %flex-center;
+        flex-basis: 50%;
+        height: 100vh;
+
+        .auth__banner-inner {
+            width: 422px;
+        }
+
+        .banner__thumb {
+            width: 100%;
+        }
+
+        .banner__text {
+            @include base.md-18;
+            text-align: center;
+            margin-top: 49px;
+            width: 100%;
+            color: var(--auth-primary-text-color);
+        }
+    }
+
+    .auth__form {
+        @extend %flex-center;
+        flex-basis: 50%;
+
+        @include abstracts.breakpoint(md) {
+            flex-basis: 100%;
+            height: 100vh;
+            background-color: var(--auth-form-bg-color);
+        }
+    }
+
+    .auth__form-inner {
+        width: 460px;
+        text-align: center;
+
+        @include abstracts.breakpoint(xs) {
+            flex-shrink: 0;
+            width: 315px;
+        }
+
+        .auth__form-heading {
+            margin-top: 50px;
+            margin-bottom: 60px;
+        }
+
+        .auth__header {
+            @include base.md-30;
+            color: var(--auth-primary-text-color);
+            margin-bottom: 10px;
+
+            @include abstracts.breakpoint(xs) {
+                @include base.md-22;
+            }
+        }
+
+        .auth__text {
+            @include base.md-15;
+            color: var(--auth-secondary-text-color);
+
+            @include abstracts.breakpoint(xs) {
+                @include base.md-14;
+            }
+        }
+
+        .logo {
+            justify-content: center;
+        }
+
+        .auth__form-social {
+            margin-top: 30px;
+        }
+
+        .auth__social-google-btn {
+            @extend %flex-center;
+            @include base.md-18;
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid var(--auth-google-btn-border-color);
+            padding: 12px 0;
+            gap: 10px;
+            color: var(--auth-google-text-color);
+        }
+
+        .auth__social-google-icon {
+            color: var(--auth-google-icon-color);
+        }
+
+        .auth__form-footer {
+            margin-top: 108px;
+        }
+
+        .form__footer-message {
+            @include base.rg-18;
+            color: var(--auth-message-text-color);
+
+            @include abstracts.breakpoint(xs) {
+                @include base.rg-16;
+            }
+        }
+
+        .form__footer-link {
+            @include base.md-18;
+            color: var(--auth-message-link-color);
+
+            @include abstracts.breakpoint(xs) {
+                @include base.md-16;
+            }
+        }
+    }
+}

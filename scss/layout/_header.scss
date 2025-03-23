@@ -1,0 +1,50 @@
+@use '../base';
+
+.header {
+    padding: 30px 0;
+    background: var(--header-bg-color);
+
+    &__inner {
+        align-items: center;
+    }
+
+    &__nav {
+        margin-left: 144px;
+    }
+
+    .nav__menu {
+        align-items: center;
+        gap: 30px;
+
+        .nav__dropdown {
+            @include base.md-15;
+
+            align-items: center;
+            gap: 6px;
+            padding: 8px 0;
+            color: var(--nav-dropdown-text-color);
+            cursor: pointer;
+        }
+
+        .nav__dropdown-icon {
+            margin-top: 3px;
+            filter: var(--nav-dropdown-icon-color);
+        }
+    }
+
+    &__user-actions {
+        align-items: center;
+        gap: 35px;
+        margin-left: auto;
+
+        .user-actions__signin {
+            @include base.md-16;
+
+            color: var(--header-signin-text-color);
+        }
+
+        .user-actions__signup {
+            padding: 12px 20px;
+        }
+    }
+}
