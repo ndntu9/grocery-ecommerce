@@ -11,6 +11,7 @@ html {
 body {
     font-size: 1.6rem;
     font-family: 'Gordita', sans-serif;
+    background: var(--body-bg-color);
 }
 
 a {
@@ -29,4 +30,8 @@ button {
 
 button {
     cursor: pointer;
+}
+
+section {
+    margin-top: 40px;
 }

@@ -51,3 +51,27 @@
     font-weight: 500;
     line-height: 146.667%;
 }
+
+@mixin bd-15 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 146.667%;
+}
+
+@mixin bd-18 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 144.444%;
+}
+
+@mixin bd-22 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 145.455%;
+}
+
+@mixin bd-42 {
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 142.857%;
+}

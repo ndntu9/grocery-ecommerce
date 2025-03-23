@@ -1,4 +1,5 @@
 @use '../base';
+@use '../abstracts';
 
 .btn {
     display: inline-block;
@@ -9,6 +10,10 @@
         background: var(--btn-primary-bg-color);
         border-radius: 10px;
         color: var(--btn-primary-text-color);
+
+        @include abstracts.breakpoint(xs) {
+            @include base.md-16;
+        }
     }
 
     &-toggle {
@@ -29,7 +34,7 @@
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            transition: all 0.3s;
+            transition: left 0.3s;
         }
 
         &.dark &__slider {

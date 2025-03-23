@@ -1,8 +1,15 @@
 html {
     --logo-text-color: #1a162e;
 
+    --body-bg-color: #f6f6f6;
+
     --header-bg-color: #eeeeee;
     --header-signin-text-color: #1a162e;
+    --header-mobile-bg-color: #ffffff;
+    --header-mobile-shadow-color: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+
+    --banner-text-color: #ffffff;
+
     --nav-dropdown-text-color: #1a162e;
     --nav-dropdown-icon-color: brightness(0) saturate(100%) invert(8%) sepia(47%) saturate(1140%) hue-rotate(215deg) brightness(86%) contrast(95%);
 

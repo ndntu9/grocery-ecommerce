@@ -27,20 +27,39 @@
     <body>
         <!-- header -->
         <header id="header" class="header"></header>
-        <script>
-            load('./templates/header.html', '#header');
-        </script>
 
         <!-- main -->
-        <main></main>
+        <main>
+            <!-- banner -->
+            <section id="banner" class="banner">
+                <div class="container">
+                    <div class="banner-inner">
+                        <a href="#!" class="banner-wrapper">
+                            <img src="./assets/img/home-banner.png" alt="" class="banner__img" />
+                            <p class="banner__text">ORDER YOUR FAVORITE COFFEE</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
 
         <!-- footer -->
         <footer id="footer" class="footer"></footer>
-        <script>
-            load('./templates/footer.html', '#footer');
-        </script>
 
         <!-- javascript -->
+        <script>
+            load([
+                {
+                    path: './templates/header.html',
+                    selector: '#header'
+                },
+                {
+                    path: './templates/footer.html',
+                    selector: '#footer'
+                }
+            ]);
+        </script>
+
         <script src="./assets/js/home.js"></script>
     </body>
 </html>

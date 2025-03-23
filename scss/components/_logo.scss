@@ -1,17 +1,32 @@
+@use '../base';
+@use '../abstracts';
+
 .logo {
     display: flex;
     align-items: center;
     gap: 14px;
 
+    @include abstracts.breakpoint(xs) {
+        gap: 10px;
+    }
+
     &__icon {
         width: 32px;
         height: 32px;
+
+        @include abstracts.breakpoint(xs) {
+            width: 24px;
+            height: 24px;
+        }
     }
 
     &__text {
+        @include base.bd-22;
+
         color: var(--logo-text-color);
-        font-size: 2.2rem;
-        font-weight: 700;
-        line-height: 145.455%;
+
+        @include abstracts.breakpoint(xs) {
+            @include base.bd-18;
+        }
     }
 }
