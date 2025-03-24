@@ -81,6 +81,8 @@
         }
 
         @include abstracts.breakpoint(sm) {
+            width: 341px;
+            font-size: 3rem;
             top: 21px;
             left: 31px;
         }
@@ -100,5 +102,109 @@
         @include base.bd-24;
 
         color: var(--category-heading-text-color);
+
+        @include abstracts.breakpoint(xs) {
+            @include base.bd-22;
+        }
+    }
+
+    &__products {
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        margin-top: 20px;
+
+        @include abstracts.breakpoint(xl) {
+            gap: 15px;
+        }
+
+        @include abstracts.breakpoint(sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__product {
+        flex: 1;
+        background: var(--category-product-bg-color);
+        padding: 20px 26px;
+        border-radius: 16px;
+
+        @include abstracts.breakpoint(sm) {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        @include abstracts.breakpoint(xs) {
+            background: var(--category-mobile-product-bg-color);
+        }
+
+        .product-wrapper {
+            align-items: center;
+            gap: 20px;
+
+            @include abstracts.breakpoint(md) {
+                flex-direction: column;
+            }
+
+            @include abstracts.breakpoint(sm) {
+                flex-direction: row;
+            }
+        }
+
+        .product-thumb {
+            flex-shrink: 0;
+            width: 116px;
+            height: 116px;
+            background: var(--category-product-thumb-bg-color);
+            border-radius: 8px;
+
+            @include abstracts.breakpoint(md) {
+                width: 100%;
+            }
+
+            @include abstracts.breakpoint(sm) {
+                width: 116px;
+            }
+
+            @include abstracts.breakpoint(xs) {
+                width: 88px;
+                height: 88px;
+            }
+
+            &__img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .product-info {
+            &__price {
+                @include base.bd-22;
+
+                color: var(--category-product-price-text-color);
+
+                @include abstracts.breakpoint(xs) {
+                    @include base.bd-18;
+                }
+            }
+
+            &__desc {
+                @include base.rg-16;
+
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+                line-clamp: 2;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: var(--category-product-desc-text-color);
+                margin-top: 6px;
+
+                @include abstracts.breakpoint(xs) {
+                    @include base.rg-14;
+                }
+            }
+        }
     }
 }

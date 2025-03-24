@@ -1,3 +1,5 @@
+@use '../abstracts';
+
 *,
 ::before,
 ::after {
@@ -34,4 +36,8 @@ button {
 
 section {
     margin-top: 40px;
+
+    @include abstracts.breakpoint(xs) {
+        margin-top: 30px;
+    }
 }
